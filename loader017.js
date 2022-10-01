@@ -176,7 +176,7 @@ var Messenger = function(el, messages, stopMessages, cycleDelay){
 }
 
 var messenger = new Messenger($('#messenger'), loadingMessages, true, 1500);
-var messenger = new Messenger($('#copyright'), ["© 2022 CatBlox. All right reserved."], false, 5000);
+var messenger = new Messenger($('.copyright'), ["© 2022 CatBlox. All right reserved."], false, 5000);
 
 
 var track = document.getElementById('track');
