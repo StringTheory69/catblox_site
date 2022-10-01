@@ -76,7 +76,7 @@ function fadeInButton() {
 
 
   
-var Messenger = function(el, messages, stopMessages){
+var Messenger = function(el, messages, stopMessages, cycleDelay){
   'use strict';
   var m = this;
   var lastMessage = false;
@@ -145,11 +145,11 @@ var Messenger = function(el, messages, stopMessages){
   } else if (stopMessages == true && m.message >= initialMessageLimit && loaded === true) {
     m.messages = ['initialization complete...'];
     lastMessage = true;
-    setTimeout(m.cycleText, 1500);
+    setTimeout(m.cycleText, cycleDelay);
   } else if (lastMessage === true) {
     setTimeout(fadeOut, 1000);
    } else {
-    setTimeout(m.cycleText, 1500);
+    setTimeout(m.cycleText, cycleDelay);
   };
   };
 
@@ -175,8 +175,8 @@ var Messenger = function(el, messages, stopMessages){
   m.init();     
 }
 
-var messenger = new Messenger($('#messenger', loadingMessages, true));
-var messenger = new Messenger($('#copyright', ["© 2022 CatBlox. All right reserved."], false));
+var messenger = new Messenger($('#messenger', loadingMessages, true, 1500));
+var messenger = new Messenger($('#copyright'), ["© 2022 CatBlox. All right reserved."], false, 5000);
 
 
 var track = document.getElementById('track');
