@@ -88,7 +88,7 @@ var Messenger = function(el, messages, stopMessages, cycleDelay){
   m.message = 0;
   m.current_length = 0;
   m.fadeBuffer = false;
-  m.messages = shuffle(messages);
+  m.messages = messages;
   setTimeout(m.animateIn, 100);
   };
 
@@ -175,8 +175,15 @@ var Messenger = function(el, messages, stopMessages, cycleDelay){
   m.init();     
 }
 
-var messenger = new Messenger($('#messenger'), loadingMessages, true, 1500);
-var messenger = new Messenger($('.copyright'), ["© 2022 CatBlox. All right reserved."], false, 20000);
+var messenger = new Messenger($('#messenger'), shuffle(loadingMessages), true, 1500);
+var messenger = new Messenger($('.copyright'), shuffle(loadingMessages).map((m, k) => {
+  if (k % 2 === 0) {
+    return "© 2022 CatBlox. All right reserved."
+  } else {
+    return m
+  }
+ 
+}), false, 20000);
 
 
 var track = document.getElementById('track');
