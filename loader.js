@@ -1,4 +1,6 @@
 
+console.log("UPDATED"); 
+
 let messages = [
   "I can't remember a world before Nohio.",
   'I use CatNip for everything.',
