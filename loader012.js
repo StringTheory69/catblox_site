@@ -14,13 +14,12 @@ zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
     playVideo(loopVideo);
-    $( "#top" ).fadeIn(2000);
+    $( "#top" ).animate({ opacity: 1 }, 1500);
     document.getElementById("zoom-video").style.display = "none";
 };
 
 async function playVideo(element) {
     try {
-        console.log("PLAY", element);
         await element.play();
     } catch (err) {
         console.log("error playing video", err);
@@ -59,17 +58,17 @@ function fadeOut() {
 }
 
 function fadeInButton() {
-        console.log("FADE IN");
+    console.log("FADE IN");
     $(".enter_button").animate({ opacity: 1 }, 1500);
-       $(".enter_button").addClass( "blinker" );
+    $(".enter_button").addClass( "blinker" );
 
     $( ".enter_button" ).click(function() {
       console.log("CLICKED");
       playPause();
-    $( ".loading_container" ).fadeOut( 2000, function() {
-          console.log("CLICKED");
-      playVideo(zoomVideo);
-      $( ".loading_container" ).hide();
+      $( ".loading_container" ).fadeOut( 2000, function() {
+        console.log("CLICKED");
+        playVideo(zoomVideo);
+        $( ".loading_container" ).hide();
     });
   });
 
