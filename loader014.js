@@ -27,7 +27,7 @@ async function playVideo(element) {
     }
 }
 
-let messages = [
+let loadingMessages = [
   "I can't remember a world before Nohio.",
   'I use CatNip for everything.',
   'It was the one silver lining in a dark and friendless void.',
@@ -76,7 +76,7 @@ function fadeInButton() {
 
 
   
-var Messenger = function(el){
+var Messenger = function(el, messages, stopMessages){
   'use strict';
   var m = this;
   var lastMessage = false;
@@ -142,12 +142,12 @@ var Messenger = function(el){
 
   if(do_cycles === true){
     setTimeout(m.animateFadeBuffer, 50);
-  } else if (m.message >= initialMessageLimit && loaded === true) {
+  } else if (stopMessages == true && m.message >= initialMessageLimit && loaded === true) {
     m.messages = ['initialization complete...'];
     lastMessage = true;
     setTimeout(m.cycleText, 1500);
   } else if (lastMessage === true) {
-      setTimeout(fadeOut, 1000);
+    setTimeout(fadeOut, 1000);
    } else {
     setTimeout(m.cycleText, 1500);
   };
@@ -175,7 +175,8 @@ var Messenger = function(el){
   m.init();     
 }
 
-var messenger = new Messenger($('#messenger'));
+var messenger = new Messenger($('#messenger', loadingMessages, true));
+var messenger = new Messenger($('#copyright', ["© 2022 CatBlox. All right reserved."], false));
 
 
 var track = document.getElementById('track');
