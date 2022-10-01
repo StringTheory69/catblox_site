@@ -2,7 +2,7 @@ var loaded = false;
 
 window.onload = (event) => {
   console.log("PAGE is loaded");
-  loaded = true;
+  //loaded = true;
 };
 
 let messages = [
