@@ -13,6 +13,7 @@ zoomVideo.setAttribute("muted", "true");
 zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
+    $( "#loop_vid" ).show();
     playVideo(loopVideo);
     $( "#top" ).animate({ opacity: 1 }, 1500);
     document.getElementById("zoom-video").style.display = "none";
@@ -61,8 +62,7 @@ function fadeInButton() {
     console.log("FADE IN");
     $(".enter_button").animate({ opacity: 1 }, 1500);
     $(".enter_button").addClass( "blinker" );
-
-    $( ".enter_button" ).click(function() {
+    $(".enter_button").click(function() {
       console.log("CLICKED");
       playPause();
       $( ".loading_container" ).fadeOut( 2000, function() {
