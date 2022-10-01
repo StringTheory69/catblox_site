@@ -5,6 +5,27 @@ window.onload = (event) => {
   loaded = true;
 };
 
+let zoomVideo = document.getElementById("zoom-video").getElementsByTagName("video")[0];
+let loopVideo = document.getElementById("loop-video").getElementsByTagName("video")[0];;
+
+zoomVideo.setAttribute("playsinline", "true");
+zoomVideo.setAttribute("muted", "true");
+zoomVideo.muted = true;
+
+zoomVideo.onended = (event) => {
+    playVideo(loopVideo);
+    $( ".top" ).fadeIn(2000);
+    document.getElementById("zoom-video").style.display = "none";
+};
+
+async function playVideo(element) {
+    try {
+        await element.play();
+    } catch (err) {
+        console.log("error playing video", err);
+    }
+}
+
 let messages = [
   "I can't remember a world before Nohio.",
   'I use CatNip for everything.',
@@ -46,11 +67,14 @@ function fadeInButton() {
       playPause();
     $( ".loading_container" ).fadeOut( 2000, function() {
           console.log("CLICKED");
+      playVideo(zoomVideo);
       $( ".loading_container" ).hide();
     });
   });
 
 }
+
+
   
 var Messenger = function(el){
   'use strict';
