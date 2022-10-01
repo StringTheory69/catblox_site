@@ -14,7 +14,7 @@ zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
     playVideo(loopVideo);
-    $( ".top" ).fadeIn(2000);
+    $( "#top" ).fadeIn(2000);
     document.getElementById("zoom-video").style.display = "none";
 };
 
