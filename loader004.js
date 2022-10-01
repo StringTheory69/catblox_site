@@ -1,8 +1,8 @@
 var loaded = false;
 
-// $( window ).load(function() {
-//   loaded = true;
-// });
+window.onload = (event) => {
+  loaded = true;
+};
 
 let messages = [
   "I can't remember a world before Nohio.",
