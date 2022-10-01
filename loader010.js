@@ -20,6 +20,7 @@ zoomVideo.onended = (event) => {
 
 async function playVideo(element) {
     try {
+        console.log("PLAY", element);
         await element.play();
     } catch (err) {
         console.log("error playing video", err);
