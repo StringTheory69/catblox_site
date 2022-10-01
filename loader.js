@@ -34,6 +34,11 @@ function fadeInButton() {
       console.log("FADE IN");
   $(".enter_button").animate({ opacity: 1 }, 1500);
      $(".enter_button").addClass( "blinker" );
+  $( ".enter_button" ).click(function() {
+  $( "#loading_container" ).fadeOut( 2000, function() {
+    $( "#loading_container" ).hide();
+  }););
+
 }
 
 function blink_text() {
