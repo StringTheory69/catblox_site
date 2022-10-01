@@ -43,6 +43,7 @@ function fadeInButton() {
 
     $( ".enter_button" ).click(function() {
       console.log("CLICKED");
+      playPause();
     $( ".loading_container" ).fadeOut( 2000, function() {
           console.log("CLICKED");
       $( ".loading_container" ).hide();
@@ -151,4 +152,34 @@ var Messenger = function(el){
 }
 
 var messenger = new Messenger($('#messenger'));
+
+
+var track = document.getElementById('track');
+var controlBtn = document.getElementById('play-pause');
+var circleAnimation = document.getElementById('circle-animation');
+var autoPlay = false;
+
+function playPause() {
+            if (track.paused) {
+            		track.muted = false;
+                track.autoplay = true;
+                track.play();
+                //controlBtn.textContent = "Pause";
+                controlBtn.className = "pause";
+                circleAnimation.className = "circlePause";
+                //console.log("PAUSE");
+            } else { 
+                track.pause();
+                 //controlBtn.textContent = "Play";
+                controlBtn.className = "play";
+                circleAnimation.className = "circlePlay";
+                //console.log("PLAY");
+            }
+        }
+
+        controlBtn.addEventListener("click", playPause);
+        track.addEventListener("ended", function() {
+          controlBtn.className = "play";
+          circleAnimation.className = "circlePlay";
+        });
 
