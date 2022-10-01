@@ -175,7 +175,7 @@ var Messenger = function(el, messages, stopMessages, cycleDelay){
   m.init();     
 }
 
-var messenger = new Messenger($('#messenger', loadingMessages, true, 1500));
+var messenger = new Messenger($('#messenger'), loadingMessages, true, 1500);
 var messenger = new Messenger($('#copyright'), ["© 2022 CatBlox. All right reserved."], false, 5000);
 
 
