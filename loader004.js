@@ -50,8 +50,6 @@ function fadeInButton() {
 
 }
   
-setInterval(blink_text, 2000);
-
 var Messenger = function(el){
   'use strict';
   var m = this;
