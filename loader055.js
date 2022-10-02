@@ -13,6 +13,11 @@ window.onload = (event) => {
   loaded = true;
 };
 
+$( "#disable" ).click(function() {
+  disableVideo = !disableVideo;
+  console.log("DISABLE", disableVideo);
+});
+
 zoomVideo.setAttribute("playsinline", "true");
 zoomVideo.setAttribute("muted", "true");
 zoomVideo.muted = true;
