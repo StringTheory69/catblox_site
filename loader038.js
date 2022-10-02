@@ -69,7 +69,14 @@ function fadeInButton() {
     $(".enter_button").addClass( "blinker" );
     $(".enter_button").click(function() {
       console.log("CLICKED");
-      playPause();
+      // playPause();
+      
+      track.muted = false;
+      track.autoplay = true;
+      track.play();
+      controlBtn.className = "pause";
+      circleAnimation.className = "circlePause";
+      
       $( ".loading_container" ).fadeOut( 2000, function() {
         console.log("CLICKED");
         
