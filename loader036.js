@@ -20,7 +20,7 @@ zoomVideo.onended = (event) => {
     // loopVideoFrame.style.display = "block";
     zoomVideoFrame.style.display = "none";
 
-    // playVideo(loopVideo);
+    playVideo(loopVideo);
     // $( "#top" ).animate({ opacity: 1 }, 1500);
     // document.getElementById("zoom-video").style.display = "none";
 };
@@ -73,7 +73,7 @@ function fadeInButton() {
       playPause();
       $( ".loading_container" ).fadeOut( 2000, function() {
         console.log("CLICKED");
-//         $( "#zoom-vid" ).show();
+        $( "#zoom-vid" ).show();
         playVideo(zoomVideo);
         $( ".loading_container" ).hide();
     });
