@@ -3,6 +3,9 @@ var loaded = false;
 let zoomVideo = document.getElementById("zoom-video").getElementsByTagName("video")[0];
 let loopVideo = document.getElementById("loop-video").getElementsByTagName("video")[0];;
 
+let zoomVideoFrame = document.getElementById("zoom-vid");
+let loopVideoFrame = document.getElementById("loop-vid");
+
 window.onload = (event) => {
   console.log("PAGE is loaded");
   loaded = true;
@@ -13,8 +16,8 @@ zoomVideo.setAttribute("muted", "true");
 zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
-    loopVideo.style.display = "block";
-    zoomVideo.style.display = "none";
+    zoomVideoFrame.style.display = "none";
+    loopVideoFrame.style.display = "block";
 
     playVideo(loopVideo);
     $( "#top" ).animate({ opacity: 1 }, 1500);
