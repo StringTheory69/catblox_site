@@ -84,12 +84,14 @@ function fadeInButton() {
           // $( "#bg-image" ).hide();
           $( "#zoom-vid" ).show();
           playVideo(zoomVideo);
-          $( ".loading_container" ).hide();
        } else {
-          $( "#bg-image" ).show();
+          // $( "#bg-image" ).show();
           $( "#zoom-vid" ).hide();
           $( "#top" ).animate({ opacity: 1 }, 1500);
        }
+        
+       $( ".loading_container" ).hide();
+
     
     });
   });
