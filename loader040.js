@@ -6,6 +6,8 @@ let loopVideo = document.getElementById("loop-video").getElementsByTagName("vide
 let zoomVideoFrame = document.getElementById("zoom-vid");
 let loopVideoFrame = document.getElementById("loop-vid");
 
+var disableVideo = true;
+
 window.onload = (event) => {
   console.log("PAGE is loaded");
   loaded = true;
@@ -78,7 +80,7 @@ function fadeInButton() {
       
       $( ".loading_container" ).fadeOut( 2000, function() {
         
-       if (window.innerWidth > 479) {
+       if (window.innerWidth > 479 || disableVideo === true) {
           $( "#zoom-vid" ).show();
           playVideo(zoomVideo);
           $( ".loading_container" ).hide();
