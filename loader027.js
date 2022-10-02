@@ -6,20 +6,6 @@ let loopVideo = document.getElementById("loop-video").getElementsByTagName("vide
 window.onload = (event) => {
   console.log("PAGE is loaded");
   loaded = true;
-  
-  var video = document.getElementById("video-id-name");
-
-  if ( zoomVideo.readyState === 4 ) {
-      // it's loaded
-    console.log("ZOOM IS LOADED");
-  }
-
-    var video = document.getElementById("video-id-name");
-
-  if ( loopVideo.readyState === 4 ) {
-      // it's loaded
-        console.log("LOOP IS LOADED");
-  }
 };
 
 zoomVideo.setAttribute("playsinline", "true");
@@ -27,11 +13,9 @@ zoomVideo.setAttribute("muted", "true");
 zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
-    $( "#loop_vid" ).show(function() {    
-      $( "#zoom_vid" ).hide(); 
-    }); 
-  
-    
+    loopVideo.style.display = "block";
+    zoomVideo.style.display = "none";
+
     playVideo(loopVideo);
     $( "#top" ).animate({ opacity: 1 }, 1500);
     // document.getElementById("zoom-video").style.display = "none";
