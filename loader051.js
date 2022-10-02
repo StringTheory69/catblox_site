@@ -79,7 +79,7 @@ function fadeInButton() {
       circleAnimation.className = "circlePause";
       
       if (window.innerWidth > 479 && disableVideo === false) {
-        $( "#bg-image" ).hide();
+        $( "#bg-image" ).css('display','none');
       }
       
       $( ".loading_container" ).animate({
