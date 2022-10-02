@@ -13,12 +13,21 @@ window.onload = (event) => {
   loaded = true;
 };
 
-$( "#disable" ).click(function() {
+$( ".disable_footer" ).click(function() {
   disableVideo = !disableVideo;
   console.log("DISABLE", disableVideo);
   if (disableVideo === true) {
         console.log("SHOW BG");
      $( "#loop-vid" ).hide();
+     $( "#bg-image" ).show();
+  };
+});
+
+$( ".disable_loader" ).click(function() {
+  disableVideo = !disableVideo;
+  console.log("DISABLE", disableVideo);
+  if (disableVideo === true) {
+        console.log("SHOW BG");
      $( "#bg-image" ).show();
   };
 });
