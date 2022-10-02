@@ -72,7 +72,7 @@ function fadeInButton() {
       playPause();
       $( ".loading_container" ).fadeOut( 2000, function() {
         console.log("CLICKED");
-         $( "#zoom_vid" ).show();
+         $( "#zoom-vid" ).show();
         playVideo(zoomVideo);
         $( ".loading_container" ).hide();
     });
