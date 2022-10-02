@@ -17,7 +17,7 @@ zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
     console.log("HERE")
-    loopVideoFrame.style.display = "block";
+    // loopVideoFrame.style.display = "block";
     zoomVideoFrame.style.display = "none";
 
     // playVideo(loopVideo);
