@@ -14,10 +14,10 @@ zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
     $( "#loop_vid" ).show();
-    $( "#zoom_vid" ).fadeOut();
+    $( "#zoom_vid" ).hide();
     playVideo(loopVideo);
     $( "#top" ).animate({ opacity: 1 }, 1500);
-    document.getElementById("zoom-video").style.display = "none";
+    // document.getElementById("zoom-video").style.display = "none";
 };
 
 async function playVideo(element) {
