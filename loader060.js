@@ -82,8 +82,8 @@ function fadeInButton() {
     $(".enter_button").click(function() {
       
       // play audio 
-      //track.muted = false;
-      //track.autoplay = true;
+      track.muted = false;
+      track.autoplay = true;
       track.play();
       controlBtn.className = "pause";
       circleAnimation.className = "circlePause";
