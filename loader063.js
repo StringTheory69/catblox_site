@@ -84,6 +84,7 @@ function fadeInButton() {
       // play audio 
       track.muted = false;
       //track.autoplay = true;
+      track.currentTime = 0;
       track.play();
       controlBtn.className = "pause";
       circleAnimation.className = "circlePause";
