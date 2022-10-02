@@ -68,9 +68,8 @@ function fadeInButton() {
     $(".enter_button").animate({ opacity: 1 }, 1500);
     $(".enter_button").addClass( "blinker" );
     $(".enter_button").click(function() {
-      console.log("CLICKED");
-      // playPause();
       
+      // play audio 
       track.muted = false;
       track.autoplay = true;
       track.play();
@@ -78,7 +77,6 @@ function fadeInButton() {
       circleAnimation.className = "circlePause";
       
       $( ".loading_container" ).fadeOut( 2000, function() {
-        console.log("CLICKED");
         
        if (window.innerWidth > 479) {
           $( "#zoom-vid" ).show();
@@ -93,8 +91,6 @@ function fadeInButton() {
 
 }
 
-
-  
 var Messenger = function(el, messages, stopMessages, cycleDelay){
   'use strict';
   var m = this;
