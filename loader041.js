@@ -80,7 +80,7 @@ function fadeInButton() {
       
       $( ".loading_container" ).fadeOut( 2000, function() {
         
-       if (window.innerWidth > 479 || disableVideo === true) {
+       if (window.innerWidth > 479 && disableVideo === false) {
           $( "#zoom-vid" ).show();
           playVideo(zoomVideo);
           $( ".loading_container" ).hide();
