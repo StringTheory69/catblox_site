@@ -78,7 +78,8 @@ function fadeInButton() {
       controlBtn.className = "pause";
       circleAnimation.className = "circlePause";
       
-      $( ".loading_container" ).fadeOut( 2000, function() {
+      $( ".loading_container" ).animate({
+    opacity: 0}, 2000, function() {
         
        if (window.innerWidth > 479 && disableVideo === false) {
           // $( "#bg-image" ).hide();
