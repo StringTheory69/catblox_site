@@ -83,7 +83,8 @@ function fadeInButton() {
       controlBtn.className = "pause";
       circleAnimation.className = "circlePause";
       
-      if (disableVideo === false) {
+      if (disableVideo === true) {
+        console.log("SHOW BG");
         $( "#bg-image" ).show();
       };
       
