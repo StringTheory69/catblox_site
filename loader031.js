@@ -16,8 +16,8 @@ zoomVideo.setAttribute("muted", "true");
 zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
-    zoomVideoFrame.style.display = "none";
     loopVideoFrame.style.display = "block";
+    zoomVideoFrame.style.display = "none";
 
     playVideo(loopVideo);
     $( "#top" ).animate({ opacity: 1 }, 1500);
