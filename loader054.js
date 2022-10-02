@@ -78,16 +78,14 @@ function fadeInButton() {
       controlBtn.className = "pause";
       circleAnimation.className = "circlePause";
       
-      if (window.innerWidth > 479 && disableVideo === false) {
-        console.log("DIPSLAY NONE");
-        $( "#bg-image" ).css('display','none');
-      }
-      
       $( ".loading_container" ).animate({
     opacity: 0}, 2000, function() {
         
        if (window.innerWidth > 479 && disableVideo === false) {
-          $( "#zoom-vid" ).show();
+          $( "#zoom-vid" ).show(
+            function() {
+              $( "#loop-vid" ).show();
+            };
           playVideo(zoomVideo);
        } else {
           // $( "#bg-image" ).show();
