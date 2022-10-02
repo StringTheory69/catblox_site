@@ -27,9 +27,9 @@ zoomVideo.setAttribute("muted", "true");
 zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
-    $( "#loop_vid" ).show(function() {
-      $( "#zoom_vid" ).hide();
-    });
+    $( "#zoom_vid" ).css('display', 'none'); 
+    $( "#loop_vid" ).css('display', 'block'); 
+  
     
     playVideo(loopVideo);
     $( "#top" ).animate({ opacity: 1 }, 1500);
