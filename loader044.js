@@ -86,6 +86,7 @@ function fadeInButton() {
           $( ".loading_container" ).hide();
           $( "#bg-image" ).hide();
        } else {
+          $( "#bg-image" ).show();
           $( "#zoom-vid" ).hide();
           $( "#top" ).animate({ opacity: 1 }, 1500);
        }
