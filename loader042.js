@@ -6,7 +6,7 @@ let loopVideo = document.getElementById("loop-video").getElementsByTagName("vide
 let zoomVideoFrame = document.getElementById("zoom-vid");
 let loopVideoFrame = document.getElementById("loop-vid");
 
-var disableVideo = true;
+var disableVideo = false;
 
 window.onload = (event) => {
   console.log("PAGE is loaded");
