@@ -20,7 +20,7 @@ zoomVideo.onended = (event) => {
     zoomVideoFrame.style.display = "none";
 
     playVideo(loopVideo);
-    $( "#top" ).animate({ opacity: 1 }, 1500);
+    // $( "#top" ).animate({ opacity: 1 }, 1500);
     // document.getElementById("zoom-video").style.display = "none";
 };
 
