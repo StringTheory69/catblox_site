@@ -1,12 +1,26 @@
 var loaded = false;
 
+let zoomVideo = document.getElementById("zoom-video").getElementsByTagName("video")[0];
+let loopVideo = document.getElementById("loop-video").getElementsByTagName("video")[0];;
+
 window.onload = (event) => {
   console.log("PAGE is loaded");
   loaded = true;
-};
+  
+  var video = document.getElementById("video-id-name");
 
-let zoomVideo = document.getElementById("zoom-video").getElementsByTagName("video")[0];
-let loopVideo = document.getElementById("loop-video").getElementsByTagName("video")[0];;
+  if ( zoomVideo.readyState === 4 ) {
+      // it's loaded
+    console.log("ZOOM IS LOADED");
+  }
+
+    var video = document.getElementById("video-id-name");
+
+  if ( loopVideo.readyState === 4 ) {
+      // it's loaded
+        console.log("LOOP IS LOADED");
+  }
+};
 
 zoomVideo.setAttribute("playsinline", "true");
 zoomVideo.setAttribute("muted", "true");
