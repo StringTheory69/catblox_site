@@ -16,6 +16,7 @@ zoomVideo.setAttribute("muted", "true");
 zoomVideo.muted = true;
 
 zoomVideo.onended = (event) => {
+    console.log("HERE")
     loopVideoFrame.style.display = "block";
     zoomVideoFrame.style.display = "none";
 
@@ -72,7 +73,7 @@ function fadeInButton() {
       playPause();
       $( ".loading_container" ).fadeOut( 2000, function() {
         console.log("CLICKED");
-         $( "#zoom-vid" ).show();
+//         $( "#zoom-vid" ).show();
         playVideo(zoomVideo);
         $( ".loading_container" ).hide();
     });
@@ -184,7 +185,7 @@ var Messenger = function(el, messages, stopMessages, cycleDelay){
 var messenger = new Messenger($('#messenger'), shuffle(loadingMessages), true, 1500);
 var messenger = new Messenger($('.copyright'), shuffle(loadingMessages).map((m, k) => {
   if (k % 2 === 0) {
-    return "© 2022 CatBlox. All right reserved."
+    return "© 2022 CatBlox. All rights reserved."
   } else {
     return m
   }
