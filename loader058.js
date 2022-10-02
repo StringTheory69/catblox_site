@@ -18,6 +18,7 @@ $( "#disable" ).click(function() {
   console.log("DISABLE", disableVideo);
   if (disableVideo === true) {
         console.log("SHOW BG");
+     $( "#loop-vid" ).hide();
      $( "#bg-image" ).show();
   };
 });
