@@ -16,6 +16,10 @@ window.onload = (event) => {
 $( "#disable" ).click(function() {
   disableVideo = !disableVideo;
   console.log("DISABLE", disableVideo);
+  if (disableVideo === true) {
+        console.log("SHOW BG");
+     $( "#bg-image" ).show();
+  };
 });
 
 zoomVideo.setAttribute("playsinline", "true");
@@ -82,11 +86,6 @@ function fadeInButton() {
       track.play();
       controlBtn.className = "pause";
       circleAnimation.className = "circlePause";
-      
-      if (disableVideo === true) {
-        console.log("SHOW BG");
-        $( "#bg-image" ).show();
-      };
       
       $( ".loading_container" ).animate({
     opacity: 0}, 2000, function() {
