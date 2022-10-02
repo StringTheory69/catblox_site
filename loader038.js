@@ -72,9 +72,15 @@ function fadeInButton() {
       playPause();
       $( ".loading_container" ).fadeOut( 2000, function() {
         console.log("CLICKED");
-        $( "#zoom-vid" ).show();
-        playVideo(zoomVideo);
-        $( ".loading_container" ).hide();
+        
+       if (window.innerWidth > 479) {
+          $( "#zoom-vid" ).show();
+          playVideo(zoomVideo);
+          $( ".loading_container" ).hide();
+       } else {
+          $( "#top" ).animate({ opacity: 1 }, 1500);
+       }
+    
     });
   });
 
