@@ -84,7 +84,9 @@ function fadeInButton() {
           $( "#zoom-vid" ).show();
           playVideo(zoomVideo);
           $( ".loading_container" ).hide();
+          $( "#bg-image" ).hide();
        } else {
+          $( "#zoom-vid" ).hide();
           $( "#top" ).animate({ opacity: 1 }, 1500);
        }
     
