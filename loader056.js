@@ -83,6 +83,10 @@ function fadeInButton() {
       controlBtn.className = "pause";
       circleAnimation.className = "circlePause";
       
+      if (disableVideo === false) {
+        $( "#bg-image" ).show();
+      };
+      
       $( ".loading_container" ).animate({
     opacity: 0}, 2000, function() {
         
@@ -94,7 +98,6 @@ function fadeInButton() {
           );
           playVideo(zoomVideo);
        } else {
-          // $( "#bg-image" ).show();
           $( "#zoom-vid" ).hide();
           $( "#top" ).animate({ opacity: 1 }, 1500);
        }
