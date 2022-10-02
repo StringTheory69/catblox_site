@@ -83,7 +83,7 @@ function fadeInButton() {
         
        if (window.innerWidth > 479 && disableVideo === false) {
           // $( "#bg-image" ).hide();
-          $( "#zoom-vid" ).show();
+          $( "#zoom-vid" ).css('display','flex');
           playVideo(zoomVideo);
        } else {
           // $( "#bg-image" ).show();
